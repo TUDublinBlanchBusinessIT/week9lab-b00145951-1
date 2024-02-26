@@ -18,14 +18,22 @@
 
 <!-- Memberid Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('memberid', 'Memberid:') !!}
-    {!! Form::number('memberid', null, ['class' => 'form-control']) !!}
+    <select name="memberid" class="form-control">
+        @foreach($members as $member)
+            <option value="{{$member->id}}">{{$member}}</option>
+        @endforeach
+
+    </select>
 </div>
 
 <!-- Courtid Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('courtid', 'Courtid:') !!}
-    {!! Form::number('courtid', null, ['class' => 'form-control']) !!}
+    <label for="courtid">Select Court:</label>
+    <select name="courtid" class="form-control">
+        @foreach($courts as $court)
+            <option value="{{ $court->id }}">{{ $court }}</option>
+        @endforeach
+    </select>
 </div>
 
 <!-- Fee Field -->

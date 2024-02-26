@@ -5,15 +5,14 @@ use \App\Models\Customer as Customer;
 
 class CustomerController extends Controller 
 { 
-    public function edit($id)
+    public function new()
 {
-    $customer = Customer::find($id);
-    return view('customers.edit')->with('customer', $customer);
+    return view('customers.new');
 }
 
-public function update(Request $request)
+public function create(Request $request)
 {
-    $customer = Customer::find($request->id);
+    $customer = new Customer();
     $customer->setFirstname($request->firstname);
     $customer->setSurname($request->surname);
     $customer->save();
