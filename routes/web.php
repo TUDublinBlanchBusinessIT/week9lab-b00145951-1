@@ -31,7 +31,7 @@ Route::post('/customers/update', 'App\Http\Controllers\CustomerController@update
 Route::get('/customers/new', 'App\Http\Controllers\CustomerController@new')->name('customers.new');
 Route::get('/customer/index', 'App\Http\Controllers\CustomerController@index')->name('customer.index');
 Route::get('/customer/create', 'App\Http\Controllers\CustomerController@create')->name('customer.create');
-
+Route::get('/loggedInMember','App\Http\Controllers\memberController@getLoggedInMemberDetails');
 
 
 

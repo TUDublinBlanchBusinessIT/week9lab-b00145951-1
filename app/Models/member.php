@@ -79,4 +79,8 @@ class member extends Model
     {
         return $this->firstname . ' ' . $this->surname;
     }
+    public function user()
+{
+    return $this->belongsTo(\App\User::class,'userid','id');
+}
 }
