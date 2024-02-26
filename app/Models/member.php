@@ -75,4 +75,8 @@ class member extends Model
     {
         return $this->hasMany(\App\Models\Booking::class, 'memberid');
     }
+    public function __toString()
+    {
+        return $this->firstname . ' ' . $this->surname;
+    }
 }

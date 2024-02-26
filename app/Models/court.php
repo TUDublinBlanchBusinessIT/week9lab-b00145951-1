@@ -71,4 +71,10 @@ class court extends Model
     {
         return $this->hasMany(\App\Models\Booking::class, 'courtid');
     }
+    public function __toString()
+    {
+        $info = "Court ID: " . $this->id . ", Surface: " . $this->surface;
+        $info .= $this->floodlights ? ", Lights" : ", No lights";
+        return $info;
+    }
 }
