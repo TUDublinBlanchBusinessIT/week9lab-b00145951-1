@@ -19,6 +19,7 @@
                 <li><a href="{{ route('customer.index') }}">Customer List</a></li>
                 <li><a href="{{ route('customer.create') }}">New Customer</a></li> 
             </ul> 
+            @include('layouts.navAuth')
         </nav> 
         <div id="page-content-wrapper"> 
             <div class="container-fluid"> 
