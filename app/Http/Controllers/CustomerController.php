@@ -17,5 +17,17 @@ public function create(Request $request)
     $customer->setSurname($request->surname);
     $customer->save();
 }
+public function edit($id)
+    {
+        $customer = Customer::find($id);
+        return view('customers.edit')->with('customer', $customer);
+    }
+public function update(Request $request)
+{
+        $customer = Customer::find($request->id);
+        $customer->setFirstname($request->firstname);
+        $customer->setSurname($request->surname);
+        $customer->save();
+ }
 } 
 ?> 
