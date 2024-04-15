@@ -20,7 +20,7 @@
           defaultDate: '2017-01-01',
           editable: true,
           eventLimit: true, // allow "more" link when too many events
-          events: '{{route('calendat.json') }}'
+          events: '{{route('calendar.json') }}'
      });
      calendar.render(); });
 </script>
