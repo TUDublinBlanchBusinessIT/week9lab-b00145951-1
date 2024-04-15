@@ -41,3 +41,5 @@ Route::resource('courts', App\Http\Controllers\courtController::class);
 Route::resource('bookings', App\Http\Controllers\bookingController::class);
 
 Route::get('calendar/display', 'App\Http\Controllers\CalendarController@display');
+
+Route::get('/calendar/json','App\Http\Controllers\CalendarController@json')->name('calendar.json');
